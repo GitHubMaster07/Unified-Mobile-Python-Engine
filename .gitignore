@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Testing
+.pytest_cache/
+reports/
+allure-results/
+
+# IDE
+.vscode/
+.idea/
+
+# Appium & OS
+*.log
+.DS_Store
+
+.pytest_cache/
+__pycache__/
+config/env.yaml
+*.pyc
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local Config (Sensitive data)
+config/env.yaml
+
+# IDE
+.vscode/
+.idea/
