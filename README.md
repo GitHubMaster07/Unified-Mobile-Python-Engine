@@ -28,28 +28,28 @@ The project follows a decoupled layered approach to ensure maintainability and c
 python -m venv venv
 .\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-
+```
 ---
 
-2. Configure Cloud Credentials
+### 2. Configure Cloud Credentials
 - Copy config/env.yaml.example to config/env.yaml.
 
 - Insert your userName and accessKey obtained from the BrowserStack dashboard.
 
 ---
 
-3. Run Smoke Tests:
+### 3. Run Smoke Tests:
 ``` PowerShell
 $env:PYTHONPATH="."; pytest tests/smoke/test_sample.py -s
-
+```
 ---
 
-📊 Cloud Monitoring
+### 📊 Cloud Monitoring
 Once execution begins, live video streams, device logs, and Appium inspector data are available via the BrowserStack App Automate Dashboard.
 
-🌌 Roadmap to "QA Space Program"
+### 🌌 Roadmap to "QA Space Program"
 This foundation is built to evolve. The following phases define the transition from Senior-level automation to an autonomous ecosystem:
-
+```
 [x] Phase 1: Foundation (Current) — Robust Driver Factory, Base Screen abstractions, and Typed Configs.
 
 [ ] Phase 2: Self-Healing AI — Integration of local LLMs/Computer Vision to recover broken selectors.
@@ -57,5 +57,5 @@ This foundation is built to evolve. The following phases define the transition f
 [ ] Phase 3: Visual Regression 2.0 — Pixel-perfect layout testing using OpenCV and Figma API.
 
 [ ] Phase 4: Contract-Driven UI Testing — Aligning mobile UI tests with Backend API schemas.
-
-Developed by Sergei Volodin
+```
+Developed by **Sergei Volodin**
