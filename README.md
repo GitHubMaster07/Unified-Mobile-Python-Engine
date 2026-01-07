@@ -1,3 +1,9 @@
+![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)
+![Appium](https://img.shields.io/badge/appium-2.x-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
+[![Python Quality Check](https://github.com/GitHubMaster07/Unified-Mobile-Python-Engine/actions/workflows/main_check.yml/badge.svg)](https://github.com/GitHubMaster07/Unified-Mobile-Python-Engine/actions/workflows/main_check.yml)
+
+
 # 🚀 Unified Mobile Python Engine (SOTA 2025-2026)
 
 A high-performance, strictly typed mobile automation framework built with Python 3.12+ and Appium 2.x. This engine is designed with a **Modular High-End Architecture**, focusing on scalability, fail-fast configuration, and future AI integration.
