@@ -1,35 +1,33 @@
+# 🚀 Unified Mobile Python Engine (SOTA 2025-2026)
+
 ![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)
 ![Appium](https://img.shields.io/badge/appium-2.x-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 [![Python Quality Check](https://github.com/GitHubMaster07/Unified-Mobile-Python-Engine/actions/workflows/main_check.yml/badge.svg)](https://github.com/GitHubMaster07/Unified-Mobile-Python-Engine/actions/workflows/main_check.yml)
 
+A high-performance, strictly typed mobile automation engine built for the 2025-2026 tech landscape. Designed with a **Modular High-End Architecture**, this project focuses on industrial-grade scalability, containerization, and observability.
 
-# 🚀 Unified Mobile Python Engine (SOTA 2025-2026)
-
-A high-performance, strictly typed mobile automation framework built with Python 3.12+ and Appium 2.x. This engine is designed with a **Modular High-End Architecture**, focusing on scalability, fail-fast configuration, and future AI integration.
-
-
+---
 
 ## 🏗 Modular Architecture
+The engine follows a decoupled layered approach to ensure zero-leakage between logic and infrastructure:
+* **`framework/`**: Core engine, WebDriver lifecycles, and robust Driver Factory.
+* **`app/`**: Application-specific logic (Page Object Model / Screen Objects).
+* **`config/`**: **Fail-fast** environment validation via **Pydantic v2**.
+* **`tests/`**: Atomic test execution powered by Pytest fixtures.
 
-The project follows a decoupled layered approach to ensure maintainability and clean code:
-
-* **`framework/`**: The core infrastructure layer. Handles WebDriver lifecycles, base element interactions, and advanced W3C Actions.
-* **`app/`**: Application-specific logic. Implements the Page Object Model (Screens) and reusable UI components.
-* **`config/`**: Environment validation via **Pydantic v2**. Ensures settings are validated at runtime before any tests execute.
-* **`tests/`**: Atomic test cases powered by Pytest fixtures and parallel execution.
-
-## 🛠 Tech Stack (2025+ Standards)
-
+## 🛠 Tech Stack & DevOps
 * **Core**: Python 3.12+ (Strict Type Hinting)
 * **Driver**: Appium 2.x (UiAutomator2)
 * **Infrastructure**: BrowserStack Real Device Cloud
-* **Validation**: Pydantic v2 (Fail-fast Settings validation)
-* **Execution**: Pytest with customized `conftest.py` hooks
+* **Validation**: Pydantic v2 (Settings validation at runtime)
+* **CI/CD**: GitHub Actions (Automated PEP8 Quality Gates)
+* **Containerization**: Docker-ready for cross-platform orchestration
+* **Observability**: **Allure Reports** for advanced execution analytics
 
 ## 🚀 Quick Start
 
-### 1. Environment Setup
+### 1. Environment Setup (Local)
 ```powershell
 python -m venv venv
 .\venv\Scripts\Activate.ps1
@@ -37,26 +35,37 @@ pip install -r requirements.txt
 ```
 ---
 
-### 2. Configure Cloud Credentials
-- Copy config/env.yaml.example to config/env.yaml.
-
-- Insert your userName and accessKey obtained from the BrowserStack dashboard.
+### 2. Containerized Execution (Docker)
+```PowerShell
+docker build -t mobile-engine .
+docker run mobile-engine
+```
 
 ---
 
-### 3. Run Smoke Tests:
+### 3. Run Tests & Generate Reports
 ``` PowerShell
-$env:PYTHONPATH="."; pytest tests/smoke/test_sample.py -s
+# Run tests
+$env:PYTHONPATH="."; pytest --alluredir=allure-results
+
+# Serve Allure Report
+allure serve allure-results
 ```
 ---
 
-### 📊 Cloud Monitoring
-Once execution begins, live video streams, device logs, and Appium inspector data are available via the BrowserStack App Automate Dashboard.
+### 📊 Cloud Monitoring & Observability
+Integration with BrowserStack App Automate provides:
+
+🎥 Live Video Streams of test execution.
+
+📋 Device Logs & Appium Inspector data.
+
+📈 Allure Dashboards for stakeholder reporting.
 
 ### 🌌 Roadmap to "QA Space Program"
 This foundation is built to evolve. The following phases define the transition from Senior-level automation to an autonomous ecosystem:
 ```
-[x] Phase 1: Foundation (Current) — Robust Driver Factory, Base Screen abstractions, and Typed Configs.
+[x] Phase 1: Foundation — Robust Driver Factory, Base Screen abstractions, CI/CD, and Dockerization.
 
 [ ] Phase 2: Self-Healing AI — Integration of local LLMs/Computer Vision to recover broken selectors.
 
